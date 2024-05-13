@@ -7,8 +7,10 @@ source ~/.git-prompt.sh
 GIT_PS1_SHOWUPSTREAM="verbose"
 precmd () { __git_ps1 "%F{cyan}%~%f%F{blue}" "%s %f" }
 
-#COMPLETION
-autoload -Uz compinit && compinit
+# git-completion
+fpath=(~/.zsh/completion $fpath)
+autoload -U compinit
+compinit -u
 
 #Aliases
 alias ccw='cc -Wall -Werror -Wextra'
