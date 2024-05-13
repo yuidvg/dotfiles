@@ -22,8 +22,6 @@ ssh-add --apple-use-keychain ~/.ssh/github >/dev/null 2>/dev/null
 export FSRPL_CREDENTIALS=~/.creds/future-log-dev-firebase-adminsdk-gehwl-4b5a743553.json
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-pwd
-
 [[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
 # Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
