@@ -24,7 +24,7 @@ for item in "$source_dir"/*; do
   # Extract item name only from path
   itemname=$(basename "$item")
   # Create a symlink in the target directory pointing to the original item
-  ln -s "$(realpath -- "$item")" "$target_dir/"
+  ln -sf "$(realpath -- "$item")" "$target_dir/"
   echo "Created symlink for $itemname in $target_dir"
 done
 shopt -u dotglob  # Reset dotglob to its default behavior
