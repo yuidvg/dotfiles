@@ -9,8 +9,11 @@ precmd () { __git_ps1 "%F{cyan}%~%f%F{blue}" "%s %f" }
 
 # git-completion
 fpath=(~/.zsh/completion $fpath)
+
+# zsh-completion
 autoload -U compinit
 compinit -u
+zstyle ':completion:*' completer _complete _approximate _prefix
 
 #Aliases
 alias ccw='cc -Wall -Werror -Wextra'
