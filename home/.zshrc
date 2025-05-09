@@ -1,10 +1,7 @@
-# Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
-# Q pre block. Keep at the top of this file.
 setopt auto_cd
 export PATH="/usr/local/sbin:$PATH"
 #PROMPT
-source ~/.git-prompt.sh
+source ~/dotfiles/script/git-prompt.sh
 GIT_PS1_SHOWUPSTREAM="verbose"
 precmd () { __git_ps1 "%F{cyan}%~%f%F{blue}" "%s %f" }
 
@@ -24,7 +21,7 @@ ssh-add >/dev/null 2>/dev/null
 ssh-add --apple-use-keychain ~/.ssh/github >/dev/null 2>/dev/null
 
 export FSRPL_CREDENTIALS=~/.creds/future-log-dev-firebase-adminsdk-gehwl-4b5a743553.json
-eval "$(/opt/homebrew/bin/brew shellenv 2>/dev/null)" 
+eval "$(/opt/homebrew/bin/brew shellenv 2>/dev/null)"
 
 #Remake
 alias remake='make fclean && make -j'
