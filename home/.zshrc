@@ -26,6 +26,9 @@ ssh-add --apple-use-keychain ~/.ssh/github >/dev/null 2>/dev/null
 export FSRPL_CREDENTIALS=~/.creds/future-log-dev-firebase-adminsdk-gehwl-4b5a743553.json
 eval "$(/opt/homebrew/bin/brew shellenv 2>/dev/null)" 
 
+#Remake
+alias remake='make fclean && make -j'
+
 [[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
 # Q post block. Keep at the bottom of this file.
 
