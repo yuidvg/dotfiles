@@ -1,7 +1,7 @@
 setopt auto_cd
 export PATH="/usr/local/sbin:$PATH"
 #PROMPT
-source ~/dotfiles/script/git-prompt.sh
+source ~/dotfiles/script/.git-prompt.sh
 GIT_PS1_SHOWUPSTREAM="verbose"
 precmd () { __git_ps1 "%F{cyan}%~%f%F{blue}" "%s %f" }
 
