@@ -28,4 +28,4 @@ ssh-add --apple-use-keychain ~/.ssh/github >/dev/null 2>/dev/null
 export PATH="/usr/local/sbin:/Users/yui/.local/bin:$PATH"
 
 # pipx completion
-eval "$(register-python-argcomplete pipx)"
+eval "$(register-python-argcomplete pipx 2>/dev/null)"
