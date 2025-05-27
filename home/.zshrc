@@ -12,7 +12,6 @@ autoload -U compinit && compinit
 zstyle ':completion:*' completer _complete _approximate _prefix
 setopt auto_cd
 
-
 # homebrew
 eval "$(/opt/homebrew/bin/brew shellenv 2>/dev/null)"
 
@@ -29,3 +28,9 @@ export PATH="/usr/local/sbin:/Users/yui/.local/bin:$PATH"
 
 # pipx completion
 eval "$(register-python-argcomplete pipx 2>/dev/null)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/yui/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/yui/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/yui/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/yui/google-cloud-sdk/completion.zsh.inc'; fi
